@@ -3,7 +3,12 @@ import React, { Component } from 'react';
 import Male from './images/male.png';
 
 class Display extends Component {
+  componentDidMount() {
+    console.log("Display componentDidMount")
+  }
+
   render() {
+    console.log("Display render")
     return (
        <main className="main">
         <div className="card">

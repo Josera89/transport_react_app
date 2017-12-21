@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <header style="margin-left:40%;">
+      <% include ./partials/_header %>
+    </header>
+    <ul>
+      <% for (url of urls) { %>
+        <li>
+          <p><%= url.shortURL %><p> <a href="/urls/<%= url.shortURL %>">EDIT</a>
+          <form style="position:relative;" method="POST" action="/urls/<%= url.shortURL %>?_method=DELETE">
+            <button style="margin-left:50px;position:absolute;top:-35px;" type="submit">Delete resource</button>
+          </form>
+        </li>
+        <br>
+      <% }; %>
+    </ul>
+    <a style="margin-left:20px;" href="/urls/new">Shorten URL</a>
+  </body>
+</html>
